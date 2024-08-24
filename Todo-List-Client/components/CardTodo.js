@@ -1,6 +1,7 @@
 import { Text, View } from "react-native";
 
-export default function CardTask() {
+export default function CardTodo({ title }) {
+
     return (
         <View
             style={{
@@ -13,8 +14,7 @@ export default function CardTask() {
             }}
         >
             <Text style={{ fontSize: 16 }}>
-                Buy Fresh Vegetables from the{"\n"}Market asdfasdfaskdjflkasjdflkasjdflks
-                askldfjlaskdjflas
+                {title}
             </Text>
         </View>
     );

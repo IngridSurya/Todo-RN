@@ -1,7 +1,9 @@
 import { StyleSheet } from "react-native";
 import { DefaultTheme, NavigationContainer } from "@react-navigation/native";
+import { ApolloProvider } from "@apollo/client";
 import AppNavigator from "./navigators/AppNavigator";
 import * as React from "react";
+import client from "./config/apollo";
 
 const navTheme = {
     ...DefaultTheme,
@@ -14,9 +16,11 @@ const navTheme = {
 export default function App() {
     return (
         <>
-            <NavigationContainer theme={navTheme}>
-                <AppNavigator />
-            </NavigationContainer>
+            <ApolloProvider client={client}>
+                <NavigationContainer theme={navTheme}>
+                    <AppNavigator />
+                </NavigationContainer>
+            </ApolloProvider>
         </>
     );
 }
