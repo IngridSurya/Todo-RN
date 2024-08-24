@@ -11,7 +11,7 @@ export default function AppNavigator() {
     const handleAddTask = async () => {
         try {
             // console.log(navigate);
-            navigate("Todo");
+            navigate("Todo", { name: "add todo" });
         } catch (error) {
             throw error;
         }
@@ -44,10 +44,15 @@ export default function AppNavigator() {
                     headerStyle: {
                         backgroundColor: "teal",
                     },
-                    headerTitleStyle: { fontSize: 38 },
+                    headerTitleStyle: { fontSize: 36 },
                     headerTintColor: "#fff",
                 }}
             />
+            {/* <Stack.Screen
+                name="AddTodo"
+                component={AddTodoScreen}
+                options={{ headerShown: false }}
+            /> */}
         </Stack.Navigator>
     );
 }
