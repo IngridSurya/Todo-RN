@@ -32,12 +32,25 @@ const resolvers = {
     Mutation: {
         postTodo: async (_, args, contextValue) => {
             try {
-                console.log(args);
                 const { title } = args.todo;
                 const result = await insertNewTodo(title);
                 return result;
             } catch (error) {
+<<<<<<< Updated upstream
                 console.log(error, "<<<<<< QUERY GET TODOS");
+=======
+                console.log(error, "<<<<<< MUTATION POST TODO");
+                return `Something went wrong, ${error.message}`;
+            }
+        },
+        patchStatus: async (_, args, contextValue) => {
+            try {
+                const { id, newStatus } = args;
+                const result = await updateStatus(id, newStatus);
+                return result;
+            } catch (error) {
+                console.log(error, "<<<<<<<< MUTATION PATCH STATUS");
+>>>>>>> Stashed changes
                 return `Something went wrong, ${error.message}`;
             }
         },
