@@ -33,10 +33,14 @@ export default function HomeNavigator({ navigation }) {
                 }}
                 screenOptions={() => {
                     return {
-                        tabBarItemStyle: { marginVertical: 40 },
+                        tabBarItemStyle: {
+                            height: 160,
+                            justifyContent: "center",
+                            flex: 1,
+                        },
                         tabBarLabelStyle: { textTransform: "none" },
                         tabBarStyle: { backgroundColor: "teal" },
-                        tabBarActiveTintColor: "#fff",
+                        tabBarActiveTintColor: "white",
                         swipeEnabled: false,
                     };
                 }}
@@ -52,7 +56,7 @@ export default function HomeNavigator({ navigation }) {
                                         <View style={{ alignItems: "center" }}>
                                             <MaterialCommunityIcons
                                                 name="calendar-clock-outline"
-                                                size={35}
+                                                size={focused ? 45 : 35}
                                                 color={focused ? "white" : "#a3c9c9"}
                                             />
                                         </View>
@@ -92,7 +96,7 @@ export default function HomeNavigator({ navigation }) {
                                         <View style={{ alignItems: "center" }}>
                                             <AntDesign
                                                 name="calendar"
-                                                size={33}
+                                                size={focused ? 43 : 33}
                                                 color={focused ? "white" : "#a3c9c9"}
                                             />
                                         </View>
@@ -130,7 +134,7 @@ export default function HomeNavigator({ navigation }) {
                                     <View style={{ alignItems: "center" }}>
                                         <MaterialCommunityIcons
                                             name="calendar-check-outline"
-                                            size={33}
+                                            size={focused ? 43 : 33}
                                             color={focused ? "white" : "#a3c9c9"}
                                         />
                                     </View>

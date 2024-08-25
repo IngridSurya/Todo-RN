@@ -10,7 +10,7 @@ export default function CardTodo({ title }) {
                 justifyContent: "center",
                 alignItems: "center",
                 borderRadius: 10,
-                elevation: 3,
+                elevation: 5,
             }}
         >
             <Text style={{ fontSize: 16 }}>
