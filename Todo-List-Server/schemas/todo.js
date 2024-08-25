@@ -34,7 +34,6 @@ const resolvers = {
     Mutation: {
         postTodo: async (_, args, contextValue) => {
             try {
-                console.log(args);
                 const { title } = args.todo;
                 const result = await insertNewTodo(title);
                 return result;
@@ -45,7 +44,6 @@ const resolvers = {
         },
         patchStatus: async (_, args, contextValue) => {
             try {
-                console.log(args);
                 const { id, newStatus } = args;
                 const result = await updateStatus(id, newStatus);
                 return result;
