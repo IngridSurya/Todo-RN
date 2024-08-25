@@ -12,7 +12,7 @@ const errorLink = onError(({ graphQLErrors, networkError }) => {
 });
 
 const httpLink = createHttpLink({
-    uri: "https://1456-86-48-11-226.ngrok-free.app",
+    uri: "https://todo.demo-ingrid.my.id",
 });
 
 const client = new ApolloClient({
