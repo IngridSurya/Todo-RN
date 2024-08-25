@@ -18,7 +18,7 @@ export default function AppNavigator() {
     };
     return (
         <Stack.Navigator>
-            <Stack.Screen name="Login" component={LoginScreen} options={{ headerShown: false }} />
+            {/* <Stack.Screen name="Login" component={LoginScreen} options={{ headerShown: false }} /> */}
             <Stack.Screen
                 name="Home"
                 component={HomeNavigator}

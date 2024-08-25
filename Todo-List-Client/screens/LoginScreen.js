@@ -20,7 +20,7 @@ export default LoginScreen = ({ navigation }) => {
                     width: "100%",
                     alignItems: "center",
                     justifyContent: "center",
-                    backgroundColor: "pink",
+                    backgroundColor: "#f5f77c",
                 }}
             >
                 <View
