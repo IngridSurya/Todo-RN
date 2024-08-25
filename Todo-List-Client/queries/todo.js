@@ -1,8 +1,8 @@
 import { gql } from "@apollo/client";
 
 const GET_TODOS = gql`
-    query get {
-        getTodos {
+    query get($status: String) {
+        getTodos(status: $status) {
             _id
             title
             status
@@ -14,5 +14,10 @@ const POST_TODO = gql`
         postTodo(todo: $todo)
     }
 `;
+const PATCH_TODO_STATUS = gql`
+    mutation patch($patchStatusId: String, $newStatus: String) {
+        patchStatus(id: $patchStatusId, newStatus: $newStatus)
+    }
+`;
 
-export { POST_TODO, GET_TODOS };
+export { GET_TODOS, POST_TODO, PATCH_TODO_STATUS };
